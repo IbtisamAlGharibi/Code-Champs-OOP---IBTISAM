@@ -1,7 +1,7 @@
 package ObjectOrientedProgramming.OOPDemo.Entities;
 
 import ObjectOrientedProgramming.OOPDemo.Behaviours.TeacherInterface;
-import ObjectOrientedProgramming.OOPDemo.Constants;
+import ObjectOrientedProgramming.OOPDemo.Utils.Constants;
 import ObjectOrientedProgramming.OOPDemo.Utils.Helper;
 
 import java.util.List;

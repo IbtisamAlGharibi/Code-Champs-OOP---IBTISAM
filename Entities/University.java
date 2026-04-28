@@ -1,5 +1,6 @@
 package ObjectOrientedProgramming.OOPDemo.Entities;
 
+import ObjectOrientedProgramming.OOPDemo.Behaviours.DepartmentInterface;
 import ObjectOrientedProgramming.OOPDemo.Behaviours.UniversityInterface;
 
 import java.util.List;
@@ -63,5 +64,12 @@ public class University extends ParentEntity implements UniversityInterface {
     public Boolean hireTeachers(Teacher teacher) {
         Boolean status = teacherList.add(teacher);
         return status;
+    }
+
+    @Override
+    public void displayDepartments() {
+        for (Department d: this.getDepartments()){
+            System.out.println(d.toString());
+        }
     }
 }

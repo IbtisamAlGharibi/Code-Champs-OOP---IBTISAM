@@ -11,4 +11,6 @@ public class Course extends ParentEntity {
     public void setCourseCode(String courseCode) {
         this.courseCode = courseCode;
     }
+
+
 }

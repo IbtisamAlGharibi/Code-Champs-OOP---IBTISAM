@@ -1,8 +1,11 @@
 package ObjectOrientedProgramming.OOPDemo.Behaviours;
 
+import ObjectOrientedProgramming.OOPDemo.Entities.Course;
+
 public interface StudentInterface {
-    void attendCourse();
-    void registerCourse();
-    void dropCourse();
+    void registerCourse(Course course);
+
+    void dropCourse(Integer courseIdToDrop);
+
     void takeExam();
 }

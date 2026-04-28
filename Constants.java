@@ -9,4 +9,6 @@ public class Constants {
     public static String COURSE_UPDATE_FAILED = "Course update has failed";
     public static String COURSE_DELETE_FAILED = "Course delete has failed";
     public static String COURSE_ALREADY_EXISTS = "Course is already added";
+    public static String STUDENT_COURSE_REGISTERED = "Course has been registered for this student";
+    public static String STUDENT_COURSE_NOT_REGISTERED = "Student course registration has failed";
 }

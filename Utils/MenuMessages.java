@@ -17,4 +17,33 @@ public class MenuMessages {
             4- Hire Teacher
             5- Go back to Main Menu
             """;
+
+    public static String DEPARTMENT_MENU_MESSAGE = """
+            1- ADD
+            2- UPDATE
+            3- DISPLAY
+            4- DELETE
+            5- Go Back to Main Menu
+            """;
+    public static String STUDENT_MENU_MESSAGE = """
+            1- ADD
+            2- UPDATE
+            3- DISPLAY
+            4- DELETE
+            5- Go Back to Main Menu
+            """;
+    public static String TEACHER_MENU_MESSAGE = """
+            1- ADD
+            2- UPDATE
+            3- DISPLAY
+            4- DELETE
+            5- Go Back to Main Menu
+            """;
+    public static String COURSE_MENU_MESSAGE = """
+            1- ADD
+            2- UPDATE
+            3- DISPLAY
+            4- DELETE
+            5- Go Back to Main Menu
+            """;
 }

@@ -1,14 +1,16 @@
 package ObjectOrientedProgramming.OOPDemo.Entities;
 
+import java.util.UUID;
+
 public class ParentEntity {
-    private Integer id;
+    private UUID id;
     private String name;
 
-    public Integer getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 

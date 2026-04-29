@@ -4,6 +4,7 @@ import ObjectOrientedProgramming.OOPDemo.Behaviours.DepartmentInterface;
 import ObjectOrientedProgramming.OOPDemo.Utils.Constants;
 
 import java.util.List;
+import java.util.UUID;
 
 public class Department extends ParentEntity implements DepartmentInterface {
 
@@ -38,7 +39,7 @@ public class Department extends ParentEntity implements DepartmentInterface {
     }
 
     @Override
-    public Boolean modifyCourse(Integer id, Course updatedCourse) {
+    public Boolean modifyCourse(UUID id, Course updatedCourse) {
         Course courseToRemove = findCourseById(id);
         if (!courseToRemove.getId().equals(null)) {
             offeredCourses.remove(courseToRemove);
@@ -52,7 +53,7 @@ public class Department extends ParentEntity implements DepartmentInterface {
         return false;
     }
 
-    public Course findCourseById(Integer courseId) {
+    public Course findCourseById(UUID courseId) {
         for (Course c : offeredCourses) {
             if (c.getId().equals(courseId)) {
                 return c;

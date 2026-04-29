@@ -1,11 +1,18 @@
 package ObjectOrientedProgramming.OOPDemo;
 
+import ObjectOrientedProgramming.OOPDemo.Entities.University;
 import ObjectOrientedProgramming.OOPDemo.Menu.Menu;
+import ObjectOrientedProgramming.OOPDemo.Services.UniversityService;
 import ObjectOrientedProgramming.OOPDemo.Utils.MenuMessages;
 
 import java.util.Scanner;
 
 public class MainApp {
+
+    static University university = UniversityService.universityInit();
+
+
+
     static Menu menu = new Menu();
     static Scanner input = new Scanner(System.in);
 

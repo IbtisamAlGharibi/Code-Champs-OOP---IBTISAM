@@ -13,4 +13,5 @@ public class Constants {
     public static String STUDENT_COURSE_NOT_REGISTERED = "Student course registration has failed";
     public static String TEACHER_COURSE_ASSIGNED = "Course has been assigned for this teacher";
     public static String TEACHER_NOT_COURSE_ASSIGNED = "Course assignment has failed";
+    public static String INPUT_EXIT_CONTINUE_MESSAGE = "Enter q to exit, press ENTER to continue";
 }

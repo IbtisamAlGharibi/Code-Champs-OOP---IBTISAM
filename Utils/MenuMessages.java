@@ -11,10 +11,11 @@ public class MenuMessages {
             6- Exit
             """;
     public static String UNIVERSITY_MENU_MESSAGE = """
-            1- Show Departments
-            2- Register Students
-            3- Hire Teacher
-            4- Charge Fees
-            5- Go back to Main Menu
+            1- Add New Departments
+            2- Show Departments
+            3- Register Students
+            4- Hire Teacher
+            5- Charge Fees
+            6- Go back to Main Menu
             """;
 }

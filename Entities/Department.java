@@ -62,4 +62,11 @@ public class Department extends ParentEntity implements DepartmentInterface {
         System.out.println(Constants.COURSE_NOT_FOUND);
         return new Course();
     }
+
+    @Override
+    public String toString() {
+        return "Department{" +
+                "offeredCourses=" + offeredCourses +
+                '}';
+    }
 }

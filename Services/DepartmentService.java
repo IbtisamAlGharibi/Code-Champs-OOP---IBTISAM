@@ -14,7 +14,7 @@ public class DepartmentService {
 
     public Department addNewDepartment() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Adding new department");
+        System.out.println("** Adding new department **");
 
         Department department = new Department();
         department.setId(UUID.randomUUID());
@@ -33,9 +33,9 @@ public class DepartmentService {
         List<Department> departmentList = new ArrayList<>();
         Boolean continueFlag = true;
         while (continueFlag) {
-            System.out.println("Entering multiple departments");
+            //System.out.println("Entering multiple departments");
             departmentList.add(addNewDepartment());
-            System.out.println(Constants.INPUT_EXIT_CONTINUE_MESSAGE);
+            System.out.println(Constants.INPUT_EXIT_CONTINUE_MESSAGE_DEPARTMENTS);
             if (scanner.nextLine().equalsIgnoreCase("q")) {
                 continueFlag = false;
             }

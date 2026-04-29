@@ -6,6 +6,8 @@ import java.util.UUID;
 
 public class UniversityService {
 
+    public static University university = universityInit();
+
     DepartmentService departmentService = new DepartmentService();
 
     public static University universityInit() {
@@ -18,18 +20,27 @@ public class UniversityService {
 
     }
 
-    public void handleUniversityMenu(Integer universityOption) {
+    public Boolean handleUniversityMenu(Integer universityOption) {
 
-        University university = universityInit();
+
         switch (universityOption) {
             case 1 -> {
-                System.out.println("Input department");
+                //System.out.println("Input department");
                 university.setDepartments(departmentService.addNewDepartments());
             }
             case 2 -> {
                 System.out.println("Show Departments");
                 university.displayDepartments();
             }
+            case 3-> {
+                System.out.println("Register student");
+
+            }
+
+            case 6 -> {
+                return false;
+            }
         }
+        return true;
     }
 }

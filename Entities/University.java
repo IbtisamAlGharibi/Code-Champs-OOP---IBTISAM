@@ -2,6 +2,7 @@ package ObjectOrientedProgramming.OOPDemo.Entities;
 
 import ObjectOrientedProgramming.OOPDemo.Behaviours.DepartmentInterface;
 import ObjectOrientedProgramming.OOPDemo.Behaviours.UniversityInterface;
+import ObjectOrientedProgramming.OOPDemo.Services.UniversityService;
 
 import java.util.List;
 
@@ -68,8 +69,25 @@ public class University extends ParentEntity implements UniversityInterface {
 
     @Override
     public void displayDepartments() {
-        for (Department d: this.getDepartments()){
-            System.out.println(d.toString());
+        System.out.println("University Name" + UniversityService.university.getName());
+        for (Department department : UniversityService.university.getDepartments()) {
+            System.out.println("Department Id: " + department.getId());
+            System.out.println("Department Name: " + department.getName());
+            for (Course c : department.getOfferedCourses()) {
+                System.out.println("Course Id: " + c.getId());
+                System.out.println("Course Name: " + c.getName());
+                System.out.println("Course Code: " + c.getCourseCode());
+            }
         }
+    }
+
+    @Override
+    public String toString() {
+        return "University{" +
+                "departments=" + departments +
+                ", address='" + address + '\'' +
+                ", studentList=" + studentList +
+                ", teacherList=" + teacherList +
+                '}';
     }
 }

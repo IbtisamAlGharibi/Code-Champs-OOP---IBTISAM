@@ -12,5 +12,10 @@ public class Course extends ParentEntity {
         this.courseCode = courseCode;
     }
 
-
+    @Override
+    public String toString() {
+        return "Course{" +
+                "courseCode='" + courseCode + '\'' +
+                '}';
+    }
 }

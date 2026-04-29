@@ -13,7 +13,7 @@ public class CourseService {
 
     public Course addNewCourse() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Adding new Course to the department");
+        System.out.println("** Adding new Course to the department **");
 
         Course course = new Course();
         course.setId(UUID.randomUUID());
@@ -35,9 +35,9 @@ public class CourseService {
         List<Course> courseList = new ArrayList<>();
         Boolean continueFlag = true;
         while (continueFlag) {
-            System.out.println("Entering multiple courses");
+            //System.out.println("Entering multiple courses");
             courseList.add(addNewCourse());
-            System.out.println(Constants.INPUT_EXIT_CONTINUE_MESSAGE);
+            System.out.println(Constants.INPUT_EXIT_CONTINUE_MESSAGE_COURSE);
             if (scanner.nextLine().equalsIgnoreCase("q")) {
                 continueFlag = false;
             }

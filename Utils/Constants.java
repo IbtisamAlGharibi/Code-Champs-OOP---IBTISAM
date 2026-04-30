@@ -23,5 +23,9 @@ public class Constants {
     public static String PERSON_ENTER_PHONE_NUMBER = "Enter Phone Number: ";
     public static String PERSON_ENTER_ID_CARD = "Enter Id Card Number: ";
     public static String PERSON_ENTER_DATE_OF_BIRTH = "Enter Date of Birth: ";
+    public static String DEPARTMENT_UPDATE_NAME = "Please enter the department name you want to update";
+    public static String DEPARTMENT_UPDATE_NEW_NAME = "Please enter the new department name";
+    public static String DEPARTMENT_UPDATE_ID = "Please enter the department ID you want to update";
+    public static String DEPARTMENT_DELETE_NAME = "Please enter the department name YOU WANT TO DELETE";
 
 }

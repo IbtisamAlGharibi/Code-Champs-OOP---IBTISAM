@@ -51,6 +51,19 @@ public class CourseService {
 
     public String updateCourse(){
         Scanner scanner = new Scanner(System.in);
+        System.out.println(Constants.COURSE_UPDATE_NAME);
+        String courseNameToUpdate = scanner.nextLine();
 
+        List<Course> courseList = new ArrayList<>();
+        System.out.println(Constants.COURSE_UPDATE_New_NAME);
+        String newCourseName = scanner.nextLine();
+
+        for (int i =0; i< courseList.size()-1; i++){
+            String oldCourseName = String.valueOf(courseList.get(i));
+            if (oldCourseName.equals(courseNameToUpdate) ){
+                oldCourseName = newCourseName;
+            }
+        }
+        return newCourseName;
     }
 }

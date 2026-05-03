@@ -1,6 +1,7 @@
 package ObjectOrientedProgramming.OOPDemo.Services;
 
 import ObjectOrientedProgramming.OOPDemo.Entities.Course;
+import ObjectOrientedProgramming.OOPDemo.Entities.Teacher;
 import ObjectOrientedProgramming.OOPDemo.Utils.Constants;
 
 import java.sql.SQLOutput;
@@ -45,6 +46,11 @@ public class CourseService {
 
         return courseList;
 
+
+    }
+
+    public String updateCourse(){
+        Scanner scanner = new Scanner(System.in);
 
     }
 }

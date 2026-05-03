@@ -1,6 +1,7 @@
 package ObjectOrientedProgramming.OOPDemo.Services;
 
 import ObjectOrientedProgramming.OOPDemo.Entities.Person;
+import ObjectOrientedProgramming.OOPDemo.Entities.Student;
 import ObjectOrientedProgramming.OOPDemo.Entities.Teacher;
 import ObjectOrientedProgramming.OOPDemo.Utils.Constants;
 
@@ -62,7 +63,20 @@ public class TeacherService {
 
     public String updateTeacher(){
         Scanner scanner = new Scanner(System.in);
+        System.out.println(Constants.TEACHER_UPDATE_NAME);
+        String teacherNameToUpdate = scanner.nextLine();
 
+        List<Teacher> teacherList = new ArrayList<>();
+        System.out.println(Constants.TEACHER_UPDATE_New_NAME);
+        String newTeacherName = scanner.nextLine();
+
+        for (int i =0; i< teacherList.size()-1; i++){
+            String oldTeacherName = String.valueOf(teacherList.get(i));
+            if (oldTeacherName.equals(teacherNameToUpdate) ){
+                oldTeacherName = newTeacherName;
+            }
+        }
+        return newTeacherName;
     }
 
 }

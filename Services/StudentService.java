@@ -68,4 +68,22 @@ public class StudentService {
         }
         return newStudentName;
     }
+
+    public String deleteStudent(){
+        Student student = new Student();
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println(Constants.STUDENT_DELETE_NAME);
+        String studentNameToDelete = scanner.nextLine();
+
+        List<Student> studentList = new ArrayList<>();
+
+        for (int i =0; i< studentList.size()-1; i++){
+            String oldStudentName = String.valueOf(studentList.get(i));
+            if (oldStudentName.equals(studentNameToDelete) ){
+                studentList.remove(studentNameToDelete);
+            }
+        }
+        return studentNameToDelete +" " + "DELETED";
+    }
 }

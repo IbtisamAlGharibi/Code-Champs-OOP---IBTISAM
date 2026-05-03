@@ -60,6 +60,9 @@ public class TeacherService {
         return teacherList;
     }
 
+    public String updateTeacher(){
+        Scanner scanner = new Scanner(System.in);
 
+    }
 
 }

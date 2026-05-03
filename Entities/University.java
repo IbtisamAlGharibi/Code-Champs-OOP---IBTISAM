@@ -82,6 +82,21 @@ public class University extends ParentEntity implements UniversityInterface {
         }
     }
 
+    public void displayStudents() {
+        System.out.println("University Name: " + UniversityService.university.getName());
+
+        for (Department department : UniversityService.university.getDepartments()) {
+
+            System.out.println("Department Id: " + department.getId());
+            System.out.println("Department Name: " + department.getName());
+
+            for (Student student : department.getStudents()) {
+                System.out.println("Student Id: " + student.getId());
+                System.out.println("Student Name: " + student.getName());
+            }
+        }
+    }
+
     @Override
     public String toString() {
         return "University{" +

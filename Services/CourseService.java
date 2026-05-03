@@ -2,6 +2,7 @@ package ObjectOrientedProgramming.OOPDemo.Services;
 
 import ObjectOrientedProgramming.OOPDemo.Entities.Course;
 import ObjectOrientedProgramming.OOPDemo.Entities.Teacher;
+import ObjectOrientedProgramming.OOPDemo.Entities.University;
 import ObjectOrientedProgramming.OOPDemo.Utils.Constants;
 
 import java.sql.SQLOutput;
@@ -11,6 +12,7 @@ import java.util.Scanner;
 import java.util.UUID;
 
 public class CourseService {
+    University university = new University();
 
     public Course addNewCourse() {
         Scanner scanner = new Scanner(System.in);
@@ -83,4 +85,38 @@ public class CourseService {
         return courseNameToDelete +" " + "DELETED";
 
     }
+
+    public Boolean handleCourseMenu(Integer courseOption) {
+        DepartmentService departmentService = new DepartmentService();
+        StudentService studentService = new StudentService();
+        TeacherService teacherService = new TeacherService();
+        CourseService courseService = new CourseService();
+
+
+        switch (courseOption) {
+            case 1 -> {
+                System.out.println("Add new course");
+                courseService.addNewCourse();
+            }
+            case 2 -> {
+                System.out.println("Updated course");
+                courseService.updateCourse();
+            }
+            case 3 -> {
+                System.out.println("Show Courses");
+                university.displayCourses();
+            }
+
+            case 4 -> {
+                System.out.println("Delete Course");
+                courseService.deleteCourse();
+            }
+
+            case 5 -> {
+                return false;
+            }
+        }
+        return true;
+    }
+
 }

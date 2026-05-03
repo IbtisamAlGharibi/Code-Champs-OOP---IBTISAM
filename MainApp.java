@@ -1,10 +1,7 @@
 package ObjectOrientedProgramming.OOPDemo;
 
 import ObjectOrientedProgramming.OOPDemo.Menu.Menu;
-import ObjectOrientedProgramming.OOPDemo.Services.DepartmentService;
-import ObjectOrientedProgramming.OOPDemo.Services.StudentService;
-import ObjectOrientedProgramming.OOPDemo.Services.TeacherService;
-import ObjectOrientedProgramming.OOPDemo.Services.UniversityService;
+import ObjectOrientedProgramming.OOPDemo.Services.*;
 import ObjectOrientedProgramming.OOPDemo.Utils.MenuMessages;
 
 import java.util.Scanner;
@@ -20,6 +17,7 @@ public class MainApp {
         DepartmentService departmentService = new DepartmentService();
         StudentService studentService = new StudentService();
         TeacherService teacherService = new TeacherService();
+        CourseService courseService = new CourseService();
 
         Boolean mainMenuContinue = true;
         while (mainMenuContinue) {
@@ -67,7 +65,16 @@ public class MainApp {
                     }
 
                 }
-                case 5 -> System.out.println("Course Menu");
+                case 5 -> {
+                    System.out.println("Course Menu");
+                    Boolean courseMenuContinue = true;
+                    while (courseMenuContinue) {
+                        System.out.println(" *********** Courses Menu ***********");
+                        System.out.println(MenuMessages.COURSE_MENU_MESSAGE);
+                        Integer courseOption = input.nextInt();
+                        courseMenuContinue = courseService.handleCourseMenu(courseOption);
+                    }
+                }
                 case 6 -> {
                     System.out.println("Exit");
                     mainMenuContinue = false;

@@ -66,4 +66,21 @@ public class CourseService {
         }
         return newCourseName;
     }
+
+    public String deleteCourse(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(Constants.COURSE_DELETE_NAME);
+        String courseNameToDelete = scanner.nextLine();
+
+        List<Course> courseList = new ArrayList<>();
+
+        for (int i =0; i< courseList.size()-1; i++){
+            String oldCourseName = String.valueOf(courseList.get(i));
+            if (oldCourseName.equals(courseNameToDelete) ){
+                courseList.remove(courseNameToDelete);
+            }
+        }
+        return courseNameToDelete +" " + "DELETED";
+
+    }
 }

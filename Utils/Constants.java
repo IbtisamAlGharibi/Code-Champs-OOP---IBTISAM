@@ -27,5 +27,8 @@ public class Constants {
     public static String DEPARTMENT_UPDATE_NEW_NAME = "Please enter the new department name";
     public static String DEPARTMENT_UPDATE_ID = "Please enter the department ID you want to update";
     public static String DEPARTMENT_DELETE_NAME = "Please enter the department name YOU WANT TO DELETE";
+    public static String STUDENT_UPDATE_NAME = "Please enter the student name you want to update";
+    public static String STUDENT_UPDATE_New_NAME = "Please enter the student new name";
+
 
 }

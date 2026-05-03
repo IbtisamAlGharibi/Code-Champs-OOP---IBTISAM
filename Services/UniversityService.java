@@ -1,7 +1,10 @@
 package ObjectOrientedProgramming.OOPDemo.Services;
 
+import ObjectOrientedProgramming.OOPDemo.Entities.Department;
 import ObjectOrientedProgramming.OOPDemo.Entities.University;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public class UniversityService {
@@ -11,6 +14,7 @@ public class UniversityService {
     DepartmentService departmentService = new DepartmentService();
     StudentService studentService = new StudentService();
     TeacherService teacherService = new TeacherService();
+    private List<Department> departments = new ArrayList<>();
 
     public static University universityInit() {
         University university = new University();

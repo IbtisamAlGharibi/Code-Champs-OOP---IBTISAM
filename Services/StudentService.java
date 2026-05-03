@@ -1,5 +1,6 @@
 package ObjectOrientedProgramming.OOPDemo.Services;
 
+import ObjectOrientedProgramming.OOPDemo.Entities.Department;
 import ObjectOrientedProgramming.OOPDemo.Entities.Student;
 import ObjectOrientedProgramming.OOPDemo.Utils.Constants;
 
@@ -46,5 +47,25 @@ public class StudentService {
             }
         }
         return studentsList;
+    }
+
+    public String updateStudent(){
+       Student student = new Student();
+       Scanner scanner = new Scanner(System.in);
+       System.out.println(Constants.STUDENT_UPDATE_NAME);
+       String studentNameToUpdate = scanner.nextLine();
+
+       List<Student> studentList = new ArrayList<>();
+       System.out.println(Constants.STUDENT_UPDATE_New_NAME);
+       String newStudentName = scanner.nextLine();
+
+
+        for (int i =0; i< studentList.size()-1; i++){
+            String oldStudentName = String.valueOf(studentList.get(i));
+            if (oldStudentName.equals(studentNameToUpdate) ){
+                oldStudentName = newStudentName;
+            }
+        }
+        return newStudentName;
     }
 }

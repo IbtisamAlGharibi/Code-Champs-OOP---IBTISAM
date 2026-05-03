@@ -1,6 +1,7 @@
 package ObjectOrientedProgramming.OOPDemo.Services;
 
 import ObjectOrientedProgramming.OOPDemo.Entities.Department;
+import ObjectOrientedProgramming.OOPDemo.Entities.University;
 import ObjectOrientedProgramming.OOPDemo.Utils.Constants;
 
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ import static ObjectOrientedProgramming.OOPDemo.Services.UniversityService.unive
 public class DepartmentService {
 
     CourseService courseService = new CourseService();
+    University university = new University();
 
     public Department addNewDepartment() {
         Scanner scanner = new Scanner(System.in);

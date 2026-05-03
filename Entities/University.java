@@ -4,11 +4,12 @@ import ObjectOrientedProgramming.OOPDemo.Behaviours.DepartmentInterface;
 import ObjectOrientedProgramming.OOPDemo.Behaviours.UniversityInterface;
 import ObjectOrientedProgramming.OOPDemo.Services.UniversityService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class University extends ParentEntity implements UniversityInterface {
 
-    private List<Department> departments;
+    private List<Department> departments = new ArrayList<>();
 
     private String address;
 

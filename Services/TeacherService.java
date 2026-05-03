@@ -79,4 +79,21 @@ public class TeacherService {
         return newTeacherName;
     }
 
+    public String deleteTeacher(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(Constants.TEACHER_DELETE_NAME);
+        String teacherNameToDelete = scanner.nextLine();
+
+        List<Teacher> TeacherList = new ArrayList<>();
+
+        for (int i =0; i< TeacherList.size()-1; i++){
+            String oldTeacherName = String.valueOf(TeacherList.get(i));
+            if (oldTeacherName.equals(teacherNameToDelete) ){
+                TeacherList.remove(teacherNameToDelete);
+            }
+        }
+        return teacherNameToDelete +" " + "DELETED";
+
+    }
+
 }

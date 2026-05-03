@@ -3,6 +3,7 @@ package ObjectOrientedProgramming.OOPDemo.Services;
 import ObjectOrientedProgramming.OOPDemo.Entities.Person;
 import ObjectOrientedProgramming.OOPDemo.Entities.Student;
 import ObjectOrientedProgramming.OOPDemo.Entities.Teacher;
+import ObjectOrientedProgramming.OOPDemo.Entities.University;
 import ObjectOrientedProgramming.OOPDemo.Utils.Constants;
 
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ public class TeacherService {
     PersonService personService = new PersonService();
     DepartmentService departmentService = new DepartmentService();
     CourseService courseService = new CourseService();
+    University university = new University();
 
     public Teacher addNewTeacher() {
         Scanner scanner = new Scanner(System.in);
@@ -94,6 +96,37 @@ public class TeacherService {
         }
         return teacherNameToDelete +" " + "DELETED";
 
+    }
+
+    public Boolean handleTeacherMenu(Integer teacherOption) {
+        DepartmentService departmentService = new DepartmentService();
+        StudentService studentService = new StudentService();
+        TeacherService teacherService = new TeacherService();
+
+        switch (teacherOption) {
+            case 1 -> {
+                System.out.println("Add new teacher");
+                teacherService.addNewTeacher();
+            }
+            case 2 -> {
+                System.out.println("Updated Teacher");
+                teacherService.updateTeacher();
+            }
+            case 3 -> {
+                System.out.println("Show Teachers");
+                university.displayTeachers();
+            }
+
+            case 4 -> {
+                System.out.println("Delete Teacher");
+                teacherService.deleteTeacher();
+            }
+
+            case 5 -> {
+                return false;
+            }
+        }
+        return true;
     }
 
 }

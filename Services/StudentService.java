@@ -15,6 +15,7 @@ public class StudentService {
     DepartmentService departmentService = new DepartmentService();
     University university = new University();
     Student student = new Student();
+    static List<Student> studentsList = new ArrayList<>();
 
 
 
@@ -40,7 +41,7 @@ public class StudentService {
 
     public List<Student> addNewStudents(){
         Scanner scanner = new Scanner(System.in);
-        List<Student> studentsList = new ArrayList<>();
+       // List<Student> studentsList = new ArrayList<>();
 
         Boolean continueFlag = true;
         while (continueFlag) {
@@ -59,13 +60,13 @@ public class StudentService {
        System.out.println(Constants.STUDENT_UPDATE_NAME);
        String studentNameToUpdate = scanner.nextLine();
 
-       List<Student> studentList = new ArrayList<>();
+       //List<Student> studentList = new ArrayList<>();
        System.out.println(Constants.STUDENT_UPDATE_New_NAME);
        String newStudentName = scanner.nextLine();
 
 
-        for (int i =0; i< studentList.size()-1; i++){
-            String oldStudentName = String.valueOf(studentList.get(i));
+        for (int i =0; i< studentsList.size(); i++){
+            String oldStudentName = String.valueOf(studentsList.get(i));
             if (oldStudentName.equals(studentNameToUpdate) ){
                 oldStudentName = newStudentName;
             }
@@ -80,12 +81,12 @@ public class StudentService {
         System.out.println(Constants.STUDENT_DELETE_NAME);
         String studentNameToDelete = scanner.nextLine();
 
-        List<Student> studentList = new ArrayList<>();
+        //List<Student> studentList = new ArrayList<>();
 
-        for (int i =0; i< studentList.size()-1; i++){
-            String oldStudentName = String.valueOf(studentList.get(i));
+        for (int i =0; i< studentsList.size(); i++){
+            String oldStudentName = String.valueOf(studentsList.get(i));
             if (oldStudentName.equals(studentNameToDelete) ){
-                studentList.remove(studentNameToDelete);
+                studentsList.remove(studentNameToDelete);
             }
         }
         return studentNameToDelete +" " + "DELETED";

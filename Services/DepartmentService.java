@@ -93,6 +93,7 @@ public class DepartmentService {
         DepartmentService departmentService = new DepartmentService();
         StudentService studentService = new StudentService();
         TeacherService teacherService = new TeacherService();
+        Department department = new Department();
 
         switch (departmentOption) {
             case 1 -> {
@@ -106,6 +107,9 @@ public class DepartmentService {
             case 3 -> {
                 System.out.println("Show Departments");
                 university.displayDepartments();
+                System.out.println("Search by department name");
+                department.DisplayByName();
+
             }
 
             case 4 -> {

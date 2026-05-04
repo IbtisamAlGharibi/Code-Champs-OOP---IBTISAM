@@ -50,7 +50,7 @@ public class Student extends Person implements StudentInterface {
     public String DisplayByName(){
         Student student = new Student();
         Scanner scanner = new Scanner(System.in);
-        System.out.println(Constants.DEPARTMENT_SEARCH_NAME);
+        System.out.println(Constants.STUDENT_SEARCH_NAME);
         String searchName = scanner.nextLine();
 
         List<Student> studentsList = new ArrayList<>();

@@ -17,6 +17,7 @@ public class DepartmentService {
 
     CourseService courseService = new CourseService();
     University university = new University();
+    static   List<Department> departmentList = new ArrayList<>();
 
     public Department addNewDepartment() {
         Scanner scanner = new Scanner(System.in);
@@ -36,7 +37,7 @@ public class DepartmentService {
 
     public List<Department> addNewDepartments() {
         Scanner scanner = new Scanner(System.in);
-        List<Department> departmentList = new ArrayList<>();
+        //List<Department> departmentList = new ArrayList<>();
         Boolean continueFlag = true;
         while (continueFlag) {
             //System.out.println("Entering multiple departments");
@@ -56,7 +57,7 @@ public class DepartmentService {
         String deptNameToUpdate = scanner.nextLine();
         department.setName(deptNameToUpdate);
 
-        List<Department> departmentList = new ArrayList<>();
+      //  List<Department> departmentList = new ArrayList<>();
         System.out.println(Constants.DEPARTMENT_UPDATE_NEW_NAME);
         String newDeptName = scanner.nextLine();
 
@@ -77,7 +78,7 @@ public class DepartmentService {
         System.out.println(Constants.DEPARTMENT_DELETE_NAME);
         String deptNameToDelete = scanner.nextLine();
 
-        List<Department> departmentList = new ArrayList<>();
+       // List<Department> departmentList = new ArrayList<>();
 
         for (int i =0; i< departmentList.size()-1; i++){
             String oldDeptName = String.valueOf(departmentList.get(i));

@@ -19,12 +19,18 @@ public class TeacherService {
     CourseService courseService = new CourseService();
     University university = new University();
     Teacher teacher = new Teacher();
+    static   List<Teacher> teacherList = new ArrayList<>();
 
     public Teacher addNewTeacher() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("** Adding new teacher **");
+        Person person = personService.addNewPerson();
 
-        Teacher teacher = (Teacher) personService.addNewPerson();
+        Teacher teacher = new Teacher();
+        teacher.setName(person.getName());
+        teacher.setEmail(person.getEmail());
+
+        //Teacher teacher = (Teacher) personService.addNewPerson();
         /*teacher.setId(UUID.randomUUID());
 
         System.out.println("Enter Name");
@@ -52,7 +58,7 @@ public class TeacherService {
 
     public List<Teacher> addNewTeachers() {
         Scanner scanner = new Scanner(System.in);
-        List<Teacher> teacherList = new ArrayList<>();
+       // List<Teacher> teacherList = new ArrayList<>();
         Boolean continueFlag = true;
         while (continueFlag) {
             teacherList.add(addNewTeacher());
@@ -69,11 +75,11 @@ public class TeacherService {
         System.out.println(Constants.TEACHER_UPDATE_NAME);
         String teacherNameToUpdate = scanner.nextLine();
 
-        List<Teacher> teacherList = new ArrayList<>();
+       // List<Teacher> teacherList = new ArrayList<>();
         System.out.println(Constants.TEACHER_UPDATE_New_NAME);
         String newTeacherName = scanner.nextLine();
 
-        for (int i =0; i< teacherList.size()-1; i++){
+        for (int i =0; i< teacherList.size(); i++){
             String oldTeacherName = String.valueOf(teacherList.get(i));
             if (oldTeacherName.equals(teacherNameToUpdate) ){
                 oldTeacherName = newTeacherName;
@@ -87,12 +93,12 @@ public class TeacherService {
         System.out.println(Constants.TEACHER_DELETE_NAME);
         String teacherNameToDelete = scanner.nextLine();
 
-        List<Teacher> TeacherList = new ArrayList<>();
+       // List<Teacher> TeacherList = new ArrayList<>();
 
-        for (int i =0; i< TeacherList.size()-1; i++){
-            String oldTeacherName = String.valueOf(TeacherList.get(i));
+        for (int i =0; i< teacherList.size(); i++){
+            String oldTeacherName =  teacherList.get(i).getName();
             if (oldTeacherName.equals(teacherNameToDelete) ){
-                TeacherList.remove(teacherNameToDelete);
+                teacherList.remove(i);
             }
         }
         return teacherNameToDelete +" " + "DELETED";

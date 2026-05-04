@@ -36,6 +36,10 @@ public class Constants {
     public static String COURSE_UPDATE_NAME = "Please enter the course name you want to update";
     public static String COURSE_UPDATE_New_NAME = "Please enter the course new name";
     public static String COURSE_DELETE_NAME = "Please enter the course name you want to DELETE";
+    public static String DEPARTMENT_SEARCH_NAME = "Please enter the department name you want to search about";
+    public static String STUDENT_SEARCH_NAME = "Please enter the student name you want to search about";
+    public static String TEACHER_SEARCH_NAME = "Please enter the teacher name you want to search about";
+    public static String COURSE_SEARCH_NAME = "Please enter the course name you want to search about";
 
 
 

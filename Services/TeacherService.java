@@ -18,6 +18,7 @@ public class TeacherService {
     DepartmentService departmentService = new DepartmentService();
     CourseService courseService = new CourseService();
     University university = new University();
+    Teacher teacher = new Teacher();
 
     public Teacher addNewTeacher() {
         Scanner scanner = new Scanner(System.in);
@@ -115,6 +116,8 @@ public class TeacherService {
             case 3 -> {
                 System.out.println("Show Teachers");
                 university.displayTeachers();
+                System.out.println("Search by Teacher name");
+                teacher.DisplayByName();
             }
 
             case 4 -> {

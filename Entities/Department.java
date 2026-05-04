@@ -3,7 +3,9 @@ package ObjectOrientedProgramming.OOPDemo.Entities;
 import ObjectOrientedProgramming.OOPDemo.Behaviours.DepartmentInterface;
 import ObjectOrientedProgramming.OOPDemo.Utils.Constants;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.UUID;
 
 public class Department extends ParentEntity implements DepartmentInterface {
@@ -79,6 +81,19 @@ public class Department extends ParentEntity implements DepartmentInterface {
     }
 
     public String DisplayByName(){
+        Department department = new Department();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(Constants.DEPARTMENT_SEARCH_NAME);
+        String searchName = scanner.nextLine();
 
+        List<Department> departmentList = new ArrayList<>();
+        for (int i =0; i<departmentList.size();i++){
+        String targetName = String.valueOf(departmentList.get(i));
+            if (searchName.equalsIgnoreCase(targetName)) {
+                System.out.println("Department Id: " + department.getId());
+                System.out.println("Department Name: " + department.getName());
+            }
+        }
+        return searchName + " " + "Details are displayed";
     }
 }

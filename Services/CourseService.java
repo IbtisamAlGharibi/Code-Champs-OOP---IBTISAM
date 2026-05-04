@@ -14,6 +14,7 @@ import java.util.UUID;
 public class CourseService {
     University university = new University();
     Course course = new Course();
+    static  List<Course> courseList = new ArrayList<>();
 
     public Course addNewCourse() {
         Scanner scanner = new Scanner(System.in);
@@ -36,7 +37,7 @@ public class CourseService {
 
     public List<Course> addNewCourses() {
         Scanner scanner = new Scanner(System.in);
-        List<Course> courseList = new ArrayList<>();
+       // List<Course> courseList = new ArrayList<>();
         Boolean continueFlag = true;
         while (continueFlag) {
             //System.out.println("Entering multiple courses");
@@ -57,11 +58,11 @@ public class CourseService {
         System.out.println(Constants.COURSE_UPDATE_NAME);
         String courseNameToUpdate = scanner.nextLine();
 
-        List<Course> courseList = new ArrayList<>();
+        //List<Course> courseList = new ArrayList<>();
         System.out.println(Constants.COURSE_UPDATE_New_NAME);
         String newCourseName = scanner.nextLine();
 
-        for (int i =0; i< courseList.size()-1; i++){
+        for (int i =0; i< courseList.size(); i++){
             String oldCourseName = String.valueOf(courseList.get(i));
             if (oldCourseName.equals(courseNameToUpdate) ){
                 oldCourseName = newCourseName;
@@ -75,9 +76,9 @@ public class CourseService {
         System.out.println(Constants.COURSE_DELETE_NAME);
         String courseNameToDelete = scanner.nextLine();
 
-        List<Course> courseList = new ArrayList<>();
+        //List<Course> courseList = new ArrayList<>();
 
-        for (int i =0; i< courseList.size()-1; i++){
+        for (int i =0; i< courseList.size(); i++){
             String oldCourseName = String.valueOf(courseList.get(i));
             if (oldCourseName.equals(courseNameToDelete) ){
                 courseList.remove(courseNameToDelete);

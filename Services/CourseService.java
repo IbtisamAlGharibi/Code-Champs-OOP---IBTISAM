@@ -13,6 +13,7 @@ import java.util.UUID;
 
 public class CourseService {
     University university = new University();
+    Course course = new Course();
 
     public Course addNewCourse() {
         Scanner scanner = new Scanner(System.in);
@@ -105,6 +106,8 @@ public class CourseService {
             case 3 -> {
                 System.out.println("Show Courses");
                 university.displayCourses();
+                System.out.println("Search by Student name");
+                course.DisplayByName();
             }
 
             case 4 -> {

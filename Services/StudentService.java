@@ -14,6 +14,7 @@ public class StudentService {
     CourseService courseService = new CourseService();
     DepartmentService departmentService = new DepartmentService();
     University university = new University();
+    Student student = new Student();
 
 
 
@@ -107,6 +108,8 @@ public class StudentService {
             case 3 -> {
                 System.out.println("Show Students");
                 university.displayStudents();
+                System.out.println("Search by Student name");
+                student.DisplayByName();
             }
 
             case 4 -> {
